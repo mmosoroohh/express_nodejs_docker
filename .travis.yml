@@ -1,0 +1,21 @@
+git:
+  depth: 200
+  quiet: true
+
+language: node_js
+sudo: required
+services:
+  - docker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "Express_crash_course"
+  env: "ExpressCrashCourse-env"
+  bucket_name: "elasticbeanstalk-us-east-2-066922495419"
+  bucket_path: "Express_crash_course"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"

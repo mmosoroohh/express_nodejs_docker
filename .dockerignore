@@ -1,0 +1,14 @@
+# Ignore the virtual environment
+env
+/__pycache__/
+*.egg-info
+*.egg/
+*.pyc
+*.swp
+
+.tox
+.coverage
+html/*
+__pycache__
+integration/node_modules
+integration/Dockerfile
